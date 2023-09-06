@@ -1,6 +1,7 @@
 import os
-from skimage import io
+
 import torchvision.datasets.mnist as mnist
+from skimage import io
 
 root = '/Users/NickChen/Documents/GitHub/-Lean-MNIST/data/MNIST/raw/'
 
@@ -25,7 +26,7 @@ def convert_to_img(train=True):
         for i,(img,lable) in enumerate(zip(train_set[0],train_set[1])):
             img_path = data_path+str(i)+'.jpg'
             io.imsave(img_path,img.numpy())
-            f.write(img_path + ' ' + str(lable) + '\n')
+            f.write(img_path + ' ' + str(lable.item()) + '\n')
         f.close()
     else:
         f = open(root+'test.txt','w')
@@ -35,7 +36,7 @@ def convert_to_img(train=True):
         for i,(img,lable) in enumerate(zip(train_set[0],train_set[1])):
             img_path = data_path+str(i)+'.jpg'
             io.imsave(img_path,img.numpy())
-            f.write(img_path + ' ' + str(lable) + '\n')
+            f.write(img_path + ' ' + str(lable.item()) + '\n')
         f.close()
 
 convert_to_img(True)
