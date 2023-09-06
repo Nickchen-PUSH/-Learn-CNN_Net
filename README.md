@@ -1,2 +1,2 @@
-# -Learn-MNIST
- I need hands-on experience
+# -Learn-CNN
+hands-on experience 
