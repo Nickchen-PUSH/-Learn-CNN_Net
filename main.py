@@ -6,7 +6,7 @@ from torch.autograd import Variable
 from torch.utils.data import DataLoader, Dataset
 from torchvision import transforms
 
-root = '/Users/NickChen/Documents/GitHub/-Lean-MNIST/data/MNIST/raw/'
+root = 'data/MNIST/raw/'
 
 #----------Prepare the dataset-------------
 def default_loader(path):
